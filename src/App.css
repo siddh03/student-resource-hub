@@ -1,0 +1,145 @@
+/* Main Application */
+.app-home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f7fb;
+}
+
+/* Navigation Bar */
+.app-navbar {
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    padding: 18px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.app-navbar .navbar-brand {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* Welcome Section */
+.app-welcome {
+    padding: 65px 15px 55px;
+}
+
+.app-welcome h1 {
+    color: #1e293b;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.app-welcome p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Option Cards */
+.app-option-card {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.app-option-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* Option Icons */
+.app-option-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 22px;
+    background-color: #e8efff;
+    border-radius: 18px;
+    font-size: 36px;
+}
+
+/* Option Titles */
+.app-option-card h4 {
+    color: #1e293b;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* Option Description */
+.app-option-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+    margin-bottom: 25px;
+}
+
+/* Continue Button */
+.app-option-btn {
+    width: 100%;
+    padding: 11px 20px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #4338ca);
+    border: none;
+    border-radius: 9px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.app-option-btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #1d4ed8, #3730a3);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.app-footer {
+    margin-top: auto;
+    padding: 22px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-welcome {
+        padding: 45px 15px 35px;
+    }
+
+    .app-welcome h1 {
+        font-size: 28px;
+    }
+
+    .app-welcome p {
+        font-size: 15px;
+    }
+
+    .app-option-card {
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-navbar .navbar-brand {
+        font-size: 19px;
+    }
+
+    .app-welcome h1 {
+        font-size: 24px;
+    }
+}

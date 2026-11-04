@@ -1,0 +1,146 @@
+/* Home Page */
+.home-page {
+    min-height: 100vh;
+    background-color: #f4f7fb;
+}
+
+/* Navigation Bar */
+.home-navbar {
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    padding: 18px 0;
+}
+
+.home-navbar .navbar-brand {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.home-navbar .navbar-text {
+    color: #ffffff;
+}
+
+/* Welcome Section */
+.home-banner {
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    color: #ffffff;
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.home-banner h1 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.home-banner p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Section Heading */
+.resource-heading {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.resource-subtitle {
+    color: #64748b;
+}
+
+/* Resource Cards */
+.resource-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+.resource-card .card-title {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.resource-card .card-body {
+    padding: 24px;
+}
+
+/* Resource Type */
+.resource-type {
+    display: inline-block;
+    background-color: #e8efff;
+    color: #2563eb;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Resource Details */
+.resource-detail-label {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.resource-detail-value {
+    color: #334155;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* File Information */
+.resource-file {
+    background-color: #f1f5f9;
+    padding: 12px;
+    border-radius: 9px;
+}
+
+/* Empty State */
+.empty-resources {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 55px 20px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+.home-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    padding: 22px 0;
+    color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-banner {
+        padding: 28px 22px;
+    }
+
+    .home-banner h1 {
+        font-size: 26px;
+    }
+
+    .home-banner p {
+        font-size: 15px;
+    }
+
+    .home-navbar .navbar-brand {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-navbar .navbar-text {
+        font-size: 13px;
+    }
+}

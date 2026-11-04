@@ -1,0 +1,134 @@
+/* Main Page */
+.faculty-upload-page {
+    min-height: 100vh;
+    background-color: #f4f7fb;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Bar */
+.faculty-navbar {
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+    padding: 18px 48px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.faculty-navbar .navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.faculty-navbar .navbar-text {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* Page Heading */
+.faculty-page-title {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.faculty-page-description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Upload Form Card */
+.faculty-card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+}
+
+.faculty-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+/* Form Labels */
+.faculty-upload-page .form-label {
+    color: #334155;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Form Inputs and Dropdowns */
+.faculty-upload-page .form-control,
+.faculty-upload-page .form-select {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+/* Input Focus */
+.faculty-upload-page .form-control:focus,
+.faculty-upload-page .form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+}
+
+/* Primary Button */
+.faculty-upload-page .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: background-color 0.2s ease;
+}
+
+.faculty-upload-page .btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* Clear Form Button */
+.faculty-upload-page .btn-outline-secondary {
+    border-radius: 8px;
+    padding: 10px 18px;
+}
+
+/* Selected File Message */
+.faculty-upload-page .alert-info {
+    overflow-wrap: anywhere;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faculty-navbar {
+        padding: 15px 20px;
+    }
+
+    .faculty-navbar .navbar-brand {
+        font-size: 18px;
+    }
+
+    .faculty-upload-page .page-content {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .faculty-card .card-body {
+        padding: 24px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .faculty-navbar {
+        padding: 12px 16px;
+    }
+
+    .faculty-navbar .navbar-brand {
+        font-size: 16px;
+    }
+
+    .faculty-navbar .navbar-text {
+        font-size: 13px;
+    }
+}
