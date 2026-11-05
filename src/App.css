@@ -1,254 +1,335 @@
+
 /* =========================================
-   2. COLLEGE HEADER
+   1. THEME – SAFFRON + NAVY
 ========================================= */
 
-.college-heading {
-    color: var(--secondary);
-    letter-spacing: 0.5px;
-    font-size: 29px;
-    font-weight: 800;
+:root {
+    --primary: #F28C28;
+    --primary-dark: #D9741A;
+    --primary-soft: #FFF1E0;
+    --secondary: #172554;
+    --secondary-dark: #0F1A3D;
+    --gold: #F5B041;
+    --light-bg: #FFF9F1;
 }
 
-.contact-button {
-    background: var(--primary);
-    color: #FFFFFF;
-    border: 1px solid var(--primary);
-    border-radius: 6px;
-    transition: all 0.3s ease;
+html {
+    scroll-behavior: smooth;
 }
 
-.contact-button:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    color: #FFFFFF;
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    margin: 0;
+    background: var(--secondary-dark);
 }
 
-/* Fallback: if the Contact button column is a direct child of <header>
-   (old JSX), pin it to the right side of the header.
-   Has no effect when the button is inside the row (fixed JSX). */
-header > .col-2 {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
+:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
 }
-
 
 /* =========================================
-   3. BACKGROUND VIDEO
+   2. BACKGROUND VIDEO
 ========================================= */
 
 .background-video-container {
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
     z-index: -1;
+    overflow: hidden;
+    background: var(--secondary-dark);
 }
 
 .background-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(3px);
     transform: scale(1.04);
+    filter: blur(2px);
 }
 
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(255, 249, 241, 0.35);
+    background: linear-gradient(
+            180deg,
+            rgba(15, 26, 61, 0.55) 0%,
+            rgba(23, 37, 84, 0.72) 100%
+    );
 }
-
 
 /* =========================================
-   4. WELCOME SECTION
+   3. HEADER
 ========================================= */
 
-.welcome-banner {
-    background: transparent !important;
-    border: none;
-    box-shadow: none;
-    text-align: center;
+.site-header,
+header {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 4px solid var(--primary);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
 }
 
-.welcome-banner h1 {
+.site-header .logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* Existing App.jsx logo */
+
+header img {
+    max-width: 75px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.college-heading {
     color: var(--secondary);
-    font-size: clamp(25px, 4vw, 38px);
     font-weight: 800;
+    font-size: clamp(14px, 2.4vw, 29px);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin: 0;
 }
 
-.welcome-banner h2,
-.welcome-banner h3,
-.welcome-banner h4,
-.welcome-banner h5,
-.welcome-banner p {
-    color: var(--secondary);
+.college-subheading {
+    color: #6B7280;
+    font-size: 12px;
+    margin: 2px 0 0;
 }
 
-.welcome-description {
-    max-width: 720px;
-    margin: auto;
-    line-height: 1.9;
+.contact-button {
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: all 0.25s ease;
 }
 
+.contact-button:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   4. WELCOME / HERO SECTION
+========================================= */
+
+.hero,
+.welcome-banner {
+    color: #FFFFFF;
+    text-align: center;
+    animation: rise 0.7s ease-out both;
+}
+
+.hero-badge,
 .welcome-badge {
     display: inline-block;
-    background: rgba(230, 126, 34, 0.15);
-    color: var(--primary-dark);
-    padding: 9px 18px;
-    border-radius: 6px;
-    letter-spacing: 1.5px;
-    font-size: 12px;
+    background: rgba(242, 140, 40, 0.20);
+    color: var(--gold);
+    border: 1px solid rgba(245, 176, 65, 0.65);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 13px;
     font-weight: 700;
+    letter-spacing: 1.2px;
 }
 
+.hero h1,
+.welcome-banner h1 {
+    color: #FFFFFF;
+    font-size: clamp(27px, 4.5vw, 43px);
+    font-weight: 800;
+    line-height: 1.2;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hero-tagline,
+.welcome-banner h5 {
+    color: var(--gold);
+    font-size: clamp(17px, 2.4vw, 22px);
+    font-weight: 600;
+}
+
+.hero-description,
+.welcome-description {
+    max-width: 720px;
+    margin-inline: auto;
+    color: #E5E9F2;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.hero-content {
+    animation: rise 0.7s ease-out both;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* =========================================
    5. STUDENT CARDS
 ========================================= */
 
+.glass-card,
 .student-card {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.95);
     border: 2px solid var(--primary);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
     transition: all 0.3s ease;
 }
 
+.glass-card:hover,
 .student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.30);
     border-color: var(--primary-dark);
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 22px rgba(230, 126, 34, 0.2);
-    transform: translateY(-4px);
 }
 
-.student-card h5 {
-    color: var(--secondary);
-    font-weight: 700;
+.glass-card.alt {
+    border-top-color: var(--secondary);
 }
 
-.student-card p {
-    color: #4B5563;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   6. STUDENT ICONS
-========================================= */
-
+.card-icon,
 .student-icon {
-    width: 70px;
-    height: 70px;
+    width: 72px;
+    height: 72px;
     margin: 0 auto;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FFF0DD;
-    color: var(--primary);
-    font-size: 30px;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    font-size: 32px;
 }
 
+.glass-card.alt .card-icon {
+    background: #E3E8FA;
+    color: var(--secondary);
+}
+
+.glass-card h2,
+.student-card h5 {
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.glass-card p,
+.student-card p {
+    color: #4B5563;
+    line-height: 1.7;
+}
 
 /* =========================================
-   7. STUDENT BUTTONS
+   6. BUTTONS
 ========================================= */
 
 .student-primary-button {
     background: var(--primary);
-    color: #FFFFFF;
     border: 1px solid var(--primary);
-    border-radius: 7px;
-    padding: 9px 20px;
-    transition: all 0.3s ease;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 22px;
+    transition: all 0.25s ease;
 }
 
 .student-primary-button:hover {
     background: var(--primary-dark);
     border-color: var(--primary-dark);
     color: #FFFFFF;
+    transform: translateY(-2px);
 }
 
 .student-outline-button {
-    background: rgba(255, 255, 255, 0.55);
-    color: var(--secondary);
+    background: var(--secondary);
     border: 1px solid var(--secondary);
-    border-radius: 7px;
-    padding: 9px 20px;
+    color: #FFFFFF;
     font-weight: 600;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 22px;
+    transition: all 0.25s ease;
 }
 
 .student-outline-button:hover {
-    background: var(--secondary);
+    background: var(--secondary-dark);
+    border-color: var(--secondary-dark);
     color: #FFFFFF;
+    transform: translateY(-2px);
 }
 
-
 /* =========================================
-   8. FOOTER
+   7. FOOTER
 ========================================= */
 
 .college-footer {
-    background: linear-gradient(135deg, #111C3A, #172554);
+    background: linear-gradient(
+            135deg,
+            #0F1A3D,
+            #172554
+    );
     border-top: 5px solid var(--primary);
+    color: #E2E8F0;
     padding: 30px 0 15px;
-    opacity: 1;
 }
 
 .college-footer .row {
-    justify-content: center;
     align-items: center;
 }
 
 .college-footer .row > div {
-    text-align: center !important;
-}
-
-/* Footer headings */
-.college-footer .footer-heading {
-    color: #F5B041 !important;
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-
-/* Footer text */
-.college-footer .footer-text {
-    color: #E2E8F0 !important;
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 10px;
-    overflow-wrap: anywhere;
     text-align: center;
 }
 
-/* Footer links */
+.college-footer .footer-heading {
+    color: var(--gold);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.college-footer .footer-text {
+    color: #E2E8F0;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
 .college-footer .footer-text a {
-    color: #E2E8F0 !important;
+    color: #E2E8F0;
     text-decoration: none;
+    transition: color 0.25s ease;
 }
 
 .college-footer .footer-text a:hover {
-    color: #F5B041 !important;
+    color: var(--gold);
 }
 
-/* Footer icons */
 .college-footer .footer-icon,
 .college-footer .footer-text i {
-    color: #F5B041 !important;
+    color: var(--gold);
 }
 
-
-/* =========================================
-   9. SOCIAL MEDIA ICONS
-========================================= */
+/* Social media icons */
 
 .college-footer .social-icon {
     width: 42px;
@@ -256,46 +337,38 @@ header > .col-2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #F5B041 !important;
+    border: 1px solid var(--gold);
     border-radius: 50%;
-    color: #F5B041 !important;
+    color: var(--gold);
     font-size: 19px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 .college-footer .social-icon:hover {
-    background: #E67E22 !important;
-    border-color: #E67E22 !important;
-    color: #FFFFFF !important;
-    transform: translateY(-4px);
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
+    transform: translateY(-3px);
 }
 
-
-/* =========================================
-   10. FACULTY UPLOAD BUTTON
-========================================= */
+/* Faculty button */
 
 .college-footer .faculty-button {
-    display: inline-block;
     background: transparent;
-    color: #F5B041 !important;
-    border: 1px solid #F5B041 !important;
-    border-radius: 7px;
-    padding: 7px 13px;
-    transition: all 0.3s ease;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: all 0.25s ease;
 }
 
 .college-footer .faculty-button:hover {
-    background: #E67E22 !important;
-    border-color: #E67E22 !important;
-    color: #FFFFFF !important;
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
 }
-
-
-/* =========================================
-   11. FOOTER COPYRIGHT
-========================================= */
 
 .college-footer .footer-divider {
     border-color: rgba(255, 255, 255, 0.25);
@@ -303,79 +376,108 @@ header > .col-2 {
 }
 
 .college-footer .footer-bottom {
-    color: #CBD5E1 !important;
+    color: #CBD5E1;
     font-size: 13px;
-    text-align: center;
 }
 
-
 /* =========================================
-   12. TABLET RESPONSIVE DESIGN
+   8. RESPONSIVE DESIGN
 ========================================= */
 
 @media (max-width: 768px) {
-
     .college-heading {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .student-card {
-        padding: 22px;
+    .site-header .logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    header img {
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    .student-card,
+    .glass-card {
+        padding: 25px;
+    }
+
+    .college-footer .row {
+        row-gap: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .college-heading {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    .site-header .logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    header img {
+        max-width: 44px;
+        max-height: 44px;
+    }
+
+    .college-subheading {
+        display: none;
+    }
+
+    .contact-button {
+        padding: 6px 9px;
+        font-size: 12px;
+    }
+
+    .student-card,
+    .glass-card {
+        padding: 22px !important;
     }
 
     .welcome-banner {
         padding: 25px 15px !important;
     }
 
-    .college-footer .row > div {
-        text-align: center !important;
-    }
-}
-
-
-/* =========================================
-   13. MOBILE RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 576px) {
-
-    .college-heading {
-        font-size: 15px;
-        letter-spacing: 0;
-    }
-
-    header .col-2 img {
-        max-width: 45px !important;
-        max-height: 45px !important;
-    }
-
-    header > .col-2 {
-        right: 10px;
-    }
-
-    .contact-button {
-        padding: 4px 8px;
-    }
-
-    .student-card {
-        padding: 18px;
-    }
-
-    .student-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 26px;
-    }
-
-    .welcome-banner h1 {
-        font-size: 25px;
+    .hero-description,
+    .welcome-description {
+        font-size: 14px;
     }
 
     .college-footer .footer-heading {
         font-size: 16px;
     }
+}
 
-    .college-footer .footer-text {
-        font-size: 13px;
+/* =========================================
+   9. ACCESSIBILITY – REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .background-video {
+        display: none;
+    }
+
+    .hero-content,
+    .hero,
+    .welcome-banner {
+        animation: none;
+    }
+
+    .glass-card,
+    .student-card,
+    .social-icon,
+    .contact-button,
+    .student-primary-button,
+    .student-outline-button {
+        transition: none;
     }
 }
