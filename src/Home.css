@@ -1,146 +1,715 @@
-/* Home Page */
+
 .home-page {
     min-height: 100vh;
-    background-color: #f4f7fb;
+    background: var(--light-bg, #FFF9F1);
+    color: #172554;
 }
 
-/* Navigation Bar */
-.home-navbar {
-    background: linear-gradient(135deg, #1d4ed8, #4338ca);
-    padding: 18px 0;
-}
+/* Header */
 
-.home-navbar .navbar-brand {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.home-navbar .navbar-text {
-    color: #ffffff;
-}
-
-/* Welcome Section */
-.home-banner {
-    background: linear-gradient(135deg, #1d4ed8, #4338ca);
-    color: #ffffff;
-    padding: 45px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.home-banner h1 {
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.home-banner p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
-/* Section Heading */
-.resource-heading {
-    color: #1e293b;
-    font-weight: 700;
-}
-
-.resource-subtitle {
-    color: #64748b;
-}
-
-/* Resource Cards */
-.resource-card {
+.site-header {
     background: #ffffff;
-    border: none;
-    border-radius: 14px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-bottom: 1px solid #eee5d9;
+    box-shadow: 0 3px 12px rgba(23, 37, 84, 0.06);
+    z-index: 100;
 }
 
-.resource-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+.header-container {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.resource-card .card-title {
-    color: #1e293b;
-    font-weight: 700;
+.college-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
 }
 
-.resource-card .card-body {
-    padding: 24px;
+.logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
 }
 
-/* Resource Type */
-.resource-type {
-    display: inline-block;
-    background-color: #e8efff;
-    color: #2563eb;
-    padding: 7px 13px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
+.college-heading {
+    font-size: 18px;
+    font-weight: 800;
+    color: #172554;
 }
 
-/* Resource Details */
-.resource-detail-label {
-    color: #64748b;
+.college-subheading {
+    color: #777;
     font-size: 13px;
 }
 
-.resource-detail-value {
-    color: #334155;
+.contact-button {
+    background: #F28C28;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 17px;
+    border-radius: 8px;
+    font-size: 14px;
     font-weight: 600;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.contact-button:hover {
+    background: #D9741A;
+    color: #ffffff;
+}
+
+/* Main */
+
+.home-main {
+    padding-top: 35px;
+    padding-bottom: 60px;
+}
+
+/* Welcome Banner */
+
+.home-banner {
+    background: linear-gradient(120deg, #172554, #243b72);
+    color: #ffffff;
+    border-radius: 17px;
+    padding: 38px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 42px;
+    overflow: hidden;
+}
+
+.banner-label {
+    color: #F5B041;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.home-banner h1 {
+    font-size: clamp(25px, 4vw, 35px);
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.home-banner p {
+    color: #e1e7f5;
+    margin-bottom: 0;
+    max-width: 680px;
+    line-height: 1.7;
+}
+
+.banner-icon {
+    font-size: 85px;
+    color: #F5B041;
+    opacity: 0.9;
+}
+
+/* Resource Heading */
+
+.resource-section {
+    min-height: 350px;
+}
+
+.resource-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.resource-heading h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.resource-heading p {
+    color: #777;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.resource-count {
+    background: #FFF1E0;
+    color: #D9741A;
+    padding: 9px 14px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Department Cards */
+
+.department-card {
+    width: 100%;
+    height: 100%;
+    min-height: 230px;
+    padding: 28px 20px;
+    background: #ffffff;
+    border: 1px solid #eee5d9;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+    border-color: #F28C28;
+    box-shadow: 0 10px 25px rgba(23, 37, 84, 0.09);
+}
+
+.department-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 16px;
+    background: #FFF1E0;
+    color: #F28C28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+}
+
+.department-card h3 {
+    color: #172554;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.department-card p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card-action {
+    color: #D9741A;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Back Button */
+
+.back-button {
+    border: none;
+    background: transparent;
+    color: #D9741A;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 0;
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: #172554;
+}
+
+/* Selected Heading */
+
+.selected-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.selected-heading-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 13px;
+    background: #FFF1E0;
+    color: #F28C28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.selected-heading h3 {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.selected-heading p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Semester Cards */
+
+.semester-card {
+    width: 100%;
+    min-height: 105px;
+    background: #ffffff;
+    border: 1px solid #eee5d9;
+    border-radius: 13px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.semester-card:hover {
+    border-color: #F28C28;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(23, 37, 84, 0.07);
+}
+
+.semester-number {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #172554;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.semester-info {
+    flex-grow: 1;
+}
+
+.semester-info h4 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #172554;
+    margin-bottom: 5px;
+}
+
+.semester-info p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.semester-arrow {
+    color: #F28C28;
+    font-size: 19px;
+}
+
+/* Subject Cards */
+
+.subject-card {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    background: #ffffff;
+    border: 1px solid #eee5d9;
+    border-radius: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.subject-card:hover {
+    border-color: #F28C28;
+    box-shadow: 0 7px 18px rgba(23, 37, 84, 0.07);
+    transform: translateY(-2px);
+}
+
+.subject-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    background: #FFF1E0;
+    color: #F28C28;
+    font-size: 22px;
+}
+
+.subject-info {
+    flex-grow: 1;
+}
+
+.subject-info h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #172554;
+    margin-bottom: 5px;
+}
+
+.subject-info p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 0;
+}
+
+.subject-arrow {
+    color: #F28C28;
+    font-size: 18px;
+}
+
+/* Materials */
+
+.materials-container {
+    background: #ffffff;
+    border: 1px solid #eee5d9;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.materials-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.materials-heading h4 {
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.materials-heading h4 i {
+    color: #F28C28;
+}
+
+.materials-heading span {
+    color: #D9741A;
+    background: #FFF1E0;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.material-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    height: 100%;
+    border: 1px solid #eee5d9;
+    border-radius: 11px;
+}
+
+.material-file-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #fff0ed;
+    color: #d94a38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+.material-details {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.material-details h5 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: #172554;
+}
+
+.material-details p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 4px;
     overflow-wrap: anywhere;
 }
 
-/* File Information */
-.resource-file {
-    background-color: #f1f5f9;
-    padding: 12px;
-    border-radius: 9px;
+.material-type {
+    font-size: 11px;
+    color: #D9741A;
+    font-weight: 700;
+}
+
+.material-view-button,
+.material-download-button {
+    border: none;
+    background: #FFF1E0;
+    color: #D9741A;
+    border-radius: 7px;
+    padding: 8px 11px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.material-view-button:hover,
+.material-download-button:hover {
+    background: #F28C28;
+    color: #ffffff;
+}
+
+.material-view-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Empty State */
-.empty-resources {
-    background-color: #ffffff;
-    border-radius: 14px;
-    padding: 55px 20px;
+
+.empty-materials {
     text-align: center;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    padding: 45px 15px;
+}
+
+.empty-materials > i {
+    font-size: 48px;
+    color: #F28C28;
+}
+
+.empty-materials h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 15px 0 8px;
+}
+
+.empty-materials p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 0;
+}
+
+/* PDF Preview Modal */
+
+.pdf-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: rgba(10, 20, 45, 0.78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pdf-modal {
+    width: 100%;
+    max-width: 1100px;
+    height: 90vh;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.pdf-modal-header h4 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.pdf-modal-header p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.pdf-close-button {
+    border: none;
+    background: #FFF1E0;
+    color: #D9741A;
+    width: 37px;
+    height: 37px;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.pdf-viewer {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    background: #f2f2f2;
+}
+
+.pdf-modal-footer {
+    padding: 12px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.download-pdf-button,
+.close-preview-button {
+    padding: 9px 15px;
+    border-radius: 7px;
+    border: none;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.download-pdf-button {
+    background: #F28C28;
+    color: #ffffff;
+}
+
+.close-preview-button {
+    background: #172554;
+    color: #ffffff;
 }
 
 /* Footer */
+
 .home-footer {
-    background-color: #ffffff;
-    border-top: 1px solid #e2e8f0;
+    background: #172554;
+    color: #ffffff;
     padding: 22px 0;
-    color: #64748b;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.home-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-footer p {
+    font-size: 13px;
+    color: #e1e7f5;
+    margin: 0;
+}
+
+.home-footer span {
+    font-size: 13px;
+    color: #F5B041;
+    font-weight: 700;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .home-main {
+        padding-top: 22px;
+    }
+
     .home-banner {
-        padding: 28px 22px;
+        padding: 28px 23px;
     }
 
-    .home-banner h1 {
-        font-size: 26px;
+    .banner-icon {
+        font-size: 55px;
     }
 
-    .home-banner p {
-        font-size: 15px;
+    .resource-heading {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
-    .home-navbar .navbar-brand {
-        font-size: 18px;
+    .department-card {
+        min-height: 205px;
+    }
+
+    .materials-container {
+        padding: 15px;
+    }
+
+    .material-card {
+        flex-wrap: wrap;
+    }
+
+    .pdf-modal {
+        height: 95vh;
     }
 }
 
 @media (max-width: 576px) {
-    .home-navbar .navbar-text {
+    .header-container {
+        min-height: 70px;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 43px;
+        height: 43px;
+    }
+
+    .college-heading {
         font-size: 13px;
+    }
+
+    .college-subheading {
+        font-size: 11px;
+    }
+
+    .contact-button {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .contact-button i {
+        margin-right: 3px !important;
+    }
+
+    .home-banner {
+        padding: 25px 18px;
+    }
+
+    .home-banner h1 {
+        font-size: 24px;
+    }
+
+    .banner-icon {
+        display: none;
+    }
+
+    .selected-heading h3 {
+        font-size: 18px;
+    }
+
+    .materials-heading h4 {
+        font-size: 14px;
+    }
+
+    .home-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pdf-modal-backdrop {
+        padding: 7px;
+    }
+
+    .pdf-modal-header {
+        padding: 12px;
     }
 }
