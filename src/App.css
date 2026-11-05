@@ -187,7 +187,7 @@ header img {
 
 .glass-card,
 .student-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.20);
     border: 2px solid var(--primary);
     border-radius: 18px;
     padding: 30px;

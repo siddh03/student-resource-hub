@@ -152,7 +152,7 @@ function App() {
                     {/* NFP Student Card */}
                     <section className="row justify-content-center">
 
-                        <div className="col-12 col-md-8 col-lg-6">
+                        <div className="col-12 col-md-8 col-lg-8">
 
                             <div className="student-card h-100">
 
@@ -160,14 +160,10 @@ function App() {
                                     <i className="bi bi-mortarboard-fill"></i>
                                 </div>
 
-                                <h5 className="fw-bold mt-3">
-                                    NFP Students
-                                </h5>
-
-                                <p>
+                                <h5 className="fw-bold m-3">
                                     Access college learning materials,
                                     academic resources and study support.
-                                </p>
+                                </h5>
 
                                 <button
                                     type="button"

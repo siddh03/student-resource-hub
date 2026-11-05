@@ -18,7 +18,7 @@ function FacultyUpload() {
       return
     }
 
-    alert(`Resource "${title}" is ready for upload.`)
+    alert(`Connect to DataBase`)
 
   }
 
@@ -34,16 +34,17 @@ function FacultyUpload() {
 
   return (
     <div className="container-fluid faculty-upload-page">
-      {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg navbar-dark faculty-navbar">
-        <span className="navbar-brand fw-bold">
-          Student Resource Hub
-        </span>
 
-        <span className="navbar-text text-white ms-auto">
-          Faculty Portal
-        </span>
-      </nav>
+      {/* Welcome Section */}
+      <section className="welcome-section">
+        <div className="container">
+          <h2>Faculty Portal</h2>
+          <p>
+            Upload and manage study materials, notes and learning resources
+            for students in one place.
+          </p>
+        </div>
+      </section>
 
       <div className="container py-5 page-content">
         {/* Page Heading */}
