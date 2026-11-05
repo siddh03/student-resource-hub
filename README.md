@@ -68,7 +68,7 @@ before the feature becomes operational.
 
 student-resource-hub/
 ├── src/
-│   ├── assets/
+|   ├── assets/
 │   │   ├── college-logo.png
 │   │   └── college.mp4
 │   ├── App.jsx
